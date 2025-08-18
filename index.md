@@ -8,3 +8,9 @@ title: "Happy Jekylling!"
 Hi there, welcome to this page!
 
 It is pretty empty right now. Please visit us at later time.
+
+## Posts
+
+> Testing copying posts from my blog
+
+- [using RMarkdown](./_posts/rmarkdown)
