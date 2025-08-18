@@ -13,4 +13,4 @@ It is pretty empty right now. Please visit us at later time.
 
 > Testing copying posts from my blog
 
-- [using RMarkdown](./_posts/rmarkdown)
+- [using RMarkdown]({% post_url _posts/rmarkdown})
