@@ -3,6 +3,8 @@ layout: default
 title: "Happy Jekylling!"
 ---
 
-## You're ready to go!
+## Welcome!!
 
-Start developing your Jekyll website.
+Hi there, welcome to this page!
+
+It is pretty empty right now. Please visit us at later time.
