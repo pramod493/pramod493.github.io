@@ -9,8 +9,6 @@ Hi there, welcome to this page!
 
 It is pretty empty right now. Please visit us at later time.
 
-## Posts
+- Find my blog at https://pramod493.wordpress.com (Has not been updated for a long time).
+- Linked profile: https://www.linkedin.com/in/pramodkr/
 
-> Testing copying posts from my blog
-
-- [using RMarkdown]({% post_url _posts/rmarkdown})
