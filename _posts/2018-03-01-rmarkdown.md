@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Automatically generate HTML report from RMarkdown"
 date: 2018-03-01
 ---
