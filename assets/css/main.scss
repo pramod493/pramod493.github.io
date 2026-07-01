@@ -20,6 +20,8 @@ $radius-large: 24px;
 $radius-medium: 18px;
 $radius-small: 12px;
 $max-width: 1180px;
+$breakpoint-tablet: 920px;
+$breakpoint-mobile: 640px;
 $sans: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 
@@ -440,7 +442,7 @@ img {
   margin: 0;
 }
 
-@media (max-width: 920px) {
+@media (max-width: $breakpoint-tablet) {
   .site-wrapper {
     padding-inline: 16px;
   }
@@ -467,7 +469,7 @@ img {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: $breakpoint-mobile) {
   .page-panel,
   .content-panel,
   .post-card,

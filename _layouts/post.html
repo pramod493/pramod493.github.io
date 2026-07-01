@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign words_per_minute = 180 %}
+{% assign words_per_minute = site.reading_speed | default: 180 %}
 {% assign rounding_offset = words_per_minute | minus: 1 %}
 {% assign words = content | strip_html | number_of_words %}
 {% assign reading_time = words | plus: rounding_offset | divided_by: words_per_minute %}
