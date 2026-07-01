@@ -11,7 +11,7 @@ title: "Home"
   </p>
   <div class="hero-actions">
     <a class="button button-primary" href="#latest">Read the latest post</a>
-    <a class="button" href="https://www.linkedin.com/in/pramodkr/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+    <a class="button" href="{{ site.external_links.linkedin }}" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
   </div>
 </section>
 
