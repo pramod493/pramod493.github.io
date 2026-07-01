@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="theme-color" content="#111827">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
-  <body>
-    {{ content }}
+  <body class="layout-{{ page.layout | default: "default" }}">
+    <div class="site-wrapper">
+      <header class="site-header">
+        <a class="site-brand" href="{{ "/" | relative_url }}">
+          <span class="site-brand-mark">P</span>
+          <span>{{ site.title }}</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="{{ "/" | relative_url }}">Home</a>
+          <a href="{{ "/" | relative_url }}#latest">Latest</a>
+          <a href="{{ "/" | relative_url }}#archive">Archive</a>
+        </nav>
+      </header>
+
+      <main class="site-frame">
+        <aside class="site-sidebar" aria-label="Site summary">
+          <section class="sidebar-card">
+            <p class="eyebrow">About</p>
+            <h1>{{ site.title }}</h1>
+            <p>{{ site.description }}</p>
+          </section>
+
+          <section class="sidebar-card">
+            <p class="eyebrow">Elsewhere</p>
+            <ul class="sidebar-links">
+              <li><a href="{{ site.external_links.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="{{ site.external_links.archive }}" target="_blank" rel="noreferrer">WordPress archive</a></li>
+            </ul>
+          </section>
+
+          <section class="sidebar-card">
+            <p class="eyebrow">Publishing</p>
+            <p>{{ site.posts | size }} published note{% if site.posts.size != 1 %}s{% endif %} and room to grow.</p>
+          </section>
+        </aside>
+
+        <section class="page-panel">
+          {{ content }}
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Built with Jekyll and shaped into a cleaner reading experience.</p>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name | default: site.title }}</p>
+      </footer>
+    </div>
   </body>
 </html>

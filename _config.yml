@@ -1,4 +1,16 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Pramod's corner of the web" # the name of your site, e.g. ACME Corp.
-description: ""
+lang: "en-US"
+title: "Pramod's corner of the web"
+description: "Thoughtful notes on software, data, and the ideas worth keeping."
+author:
+  name: "Pramod Kumar"
+external_links:
+  linkedin: "https://www.linkedin.com/in/pramodkr/"
+  archive: "https://pramod493.wordpress.com"
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
