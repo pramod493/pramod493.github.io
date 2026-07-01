@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: post
 title: "Automatically generate HTML report from RMarkdown"
 date: 2018-03-01
 ---
 
 RMarkdown (Rmd) is commonly accessed via RStudio interface. It supports export to HTML, markdown, PDF and MS-Word.
 
-A sample Rmd file consists of yams header, content and code block enclosed in {r}
+A sample Rmd file consists of a YAML header, content, and a code block enclosed in {r}
 
  --- 
 title: "sample report" 

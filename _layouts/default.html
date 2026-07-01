@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace }}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
-  <body>
-    {{ content }}
+  <body class="page-{{ page.page_class | default: page.layout | default: "default" }}">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="site-brand" href="{{ "/" | relative_url }}">
+            <span class="site-brand__mark">P</span>
+            <span>
+              <strong>{{ site.title }}</strong>
+              <small>{{ site.description }}</small>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="{{ "/" | relative_url }}">Home</a>
+            <a href="{{ "/#latest-posts" | relative_url }}">Posts</a>
+            <a href="{{ site.linkedin_url }}">LinkedIn</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-main">
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div>
+            <p class="site-footer__title">{{ site.title }}</p>
+            <p class="site-footer__copy">Thoughtful writing and useful references collected in one place.</p>
+          </div>
+          <div class="site-footer__links">
+            <a href="{{ site.linkedin_url }}">LinkedIn</a>
+            <a href="{{ site.legacy_blog_url }}">Archived blog</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
